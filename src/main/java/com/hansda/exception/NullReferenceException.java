@@ -1,33 +1,33 @@
 package com.hansda.exception;
 
-public class ListEmptyException extends RuntimeException{
+public class NullReferenceException extends RuntimeException{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public ListEmptyException() {
+	public NullReferenceException() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ListEmptyException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+	public NullReferenceException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ListEmptyException(String message, Throwable cause) {
+	public NullReferenceException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ListEmptyException(String message) {
+	public NullReferenceException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
 
-	public ListEmptyException(Throwable cause) {
+	public NullReferenceException(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}

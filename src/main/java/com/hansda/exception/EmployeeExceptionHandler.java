@@ -8,14 +8,19 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class EmployeeExceptionHandler {
 	
-	@ExceptionHandler(value = {IdNotFoundException.class})
-	public ResponseEntity<Object> idNotFound(IdNotFoundException e){
+	@ExceptionHandler(IdNotFoundException.class)
+	public ResponseEntity<Object> exception(IdNotFoundException e){
 		return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
 	}
 	
-	@ExceptionHandler(value = {ListEmptyException.class})
-	public ResponseEntity<Object> listEmpty(ListEmptyException e){
-		return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+	@ExceptionHandler(DuplicateEntryException.class)
+	public ResponseEntity<Object> exception(DuplicateEntryException e){
+		return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
+	}
+	
+	@ExceptionHandler(NullReferenceException.class)
+	public ResponseEntity<Object> exception(NullReferenceException e){
+		return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
 	}
 
 }

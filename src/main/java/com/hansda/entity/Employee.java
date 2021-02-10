@@ -6,8 +6,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
-@Table(name="employees")
+@Table(name = "employees")
+@Getter
+@Setter
+@NoArgsConstructor
 public class Employee {
 
 	@Id
@@ -15,38 +22,13 @@ public class Employee {
 	private int id;
 	private String name;
 	private String email;
+	private String location;
 
-	public Employee() {
-	}
-
-	public Employee(String name, String email) {
+	public Employee(String name, String email, String location) {
 		super();
 		this.name = name;
 		this.email = email;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+		this.location = location;
 	}
 
 }
